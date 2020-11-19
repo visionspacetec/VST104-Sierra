@@ -1,0 +1,3 @@
+[submodule "VST104-Libraries"]
+	path = VST104-Libraries
+	url = https://github.com/visionspacetec/VST104-Libraries.git
