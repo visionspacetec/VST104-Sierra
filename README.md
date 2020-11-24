@@ -1,4 +1,4 @@
-# VST104 Board Sierra - single MCU OBC for PC104 CubeSats
+# VST104 Board Sierra - single MCU OBC for PC104
 This repository contains the KiCad project and other documents created during the development of Board Sierra under [VST104 project](https://github.com/visionspacetec/VST104/). This PC104 CubeSats module is a single redundant onboard computer designed to fulfill most space industry requirements.
 
 <p align="center">
