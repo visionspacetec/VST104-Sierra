@@ -12,11 +12,11 @@ This repository contains the KiCad project and other documents created during th
 
 
 ## Basic specifications
-* **`processor:`** This onboard computer is driven by state of the art, ultra-low-power STM32L496 ARM® Cortex®-M4 core microcontroller. This MCU is capable of running up to 78[MHz] in our design.
-* **`clock:`** Microcontroller is driven by two external clock sources. Low-speed external 32.768[kHz] oscillator (LSE) and high-speed external 26[MHz] oscillator (HSE). The MCU is capable of temporarily disable the HSE to achieve better power consumption.
-* **`memory:`** Two groups of triple redundant external memories are available for data storage and processing. The triple redundancy was chosen as an effective measure against single event effects. The first memory group is 256 [Mbit] Flash wired via Quad-SPI interface and the second one is 2 [Mbit] F-RAM using SPI.
-* **`peripherals:`** This module can communicate with other CubeSat subsystems using a wide variety of redundant protocols. The main PC104 header is capable of connecting to 2x CAN-BUS, 3x I2C, 4x UART (with CTS and RTS), 2xSPI (2 enables each), and 22 general purpose A/D I/O pins. All of the listed peripherals are wired thru separated isolators controlled by the MCU. On top of that, separate traces are used for system check and maintenance signals, such as: WatchDog, KillSwitch, CPUmode, Sync, FaultCollector. The pinout of these interferences is shown in figure 3.
-* **`connectivity:`** A user can program and debug this OBC using SWI and/or UART interface. These interfaces are accessible on the board's edge on a separate connector with integrated electrostatic discharge protection circuitry. The SWI interface is compatible with STM ST-LINK series programmers (including SWO pin).
+* **`processor:`** This onboard computer is driven by state of the art, ultra-low-power **STM32L496 ARM® Cortex®-M4 core** microcontroller. This MCU is capable of running **up to 78[MHz]** in our design.
+* **`clock:`** Microcontroller is driven by two external clock sources. Low-speed **external 32.768[kHz] oscillator** (LSE) and high-speed **external 26[MHz] oscillator** (HSE). The MCU is capable of temporarily disable the HSE to achieve better power consumption.
+* **`memory:`** Two groups of triple redundant external memories are available for data storage and processing. The triple redundancy was chosen as an effective measure against single event effects. The first memory group is **256 [Mbit] Flash** wired via Quad-SPI interface and the second one is **2 [Mbit] F-RAM** using SPI.
+* **`peripherals:`** This module can communicate with other CubeSat subsystems using a wide variety of redundant protocols. The main PC104 header is capable of connecting to **2x CAN-BUS, 3x I2C, 4x UART** (with CTS and RTS), **2xSPI** (2 enables each), and **22 general purpose** A/D I/O pins. All of the listed peripherals are wired thru separated isolators controlled by the MCU. On top of that, separate traces are used for system check and maintenance signals, such as: WatchDog, KillSwitch, CPUmode, Sync, FaultCollector. The pinout of these interferences is shown in figure 3.
+* **`connectivity:`** A user can program and debug this OBC using **SWI and/or UART interface**. These interfaces are accessible on the board's edge on a separate connector with integrated electrostatic discharge protection circuitry. The SWI interface is compatible with STM ST-LINK series programmers (including SWO pin).
 
 <p align="center">
   <br>
@@ -27,10 +27,10 @@ This repository contains the KiCad project and other documents created during th
 </p>
 
 ## Features
-* All used components are suitable for the space environment, following: mechanical failure qualifications AEC-Q100 or AEC-Q200 and military rated operational temperatures (-40°C to +125°C).
-* This module requires two separate power lines of 3.3[V] and 5[V] ratings. A robust power management circuitry is present separately on these lines, providing various functionalities. Namely: tunable over and under-voltage protection, tunable over-current protection, amplified current monitoring output, kill switching, or simultaneous power down.
-* A group of seven I2C temperature sensors is spread over the entire module. These sensors are used to check the temperature of essential submodules such as: 2x power management, 2x CAN-BUS drivers, 2x external memories, and 1x STM32 microcontroller. Also, the MCU can power these sensors in case of power saving or latch-up events.
-* A compact design was one of our priorities during the development of this module. As a result, this module's full three-fourths are left empty and ready to accommodate any required payload. This current version is the payload sector represented as a universal soldering array with exposed power lines (outside the power management).
+* All used components are suitable for the space environment, following: mechanical failure qualifications **AEC-Q100 or AEC-Q200** and **military rated** operational temperatures (-40°C to +125°C).
+* This module requires two separate power lines of 3.3[V] and 5[V] ratings. A **robust power management** circuitry is present separately on these lines, providing various functionalities. Namely: tunable over and under-voltage protection, tunable over-current protection, amplified current monitoring output, kill switching, or simultaneous power down.
+* A group of **seven I2C temperature sensors** is spread over the entire module. These sensors are used to check the temperature of essential submodules such as: 2x power management, 2x CAN-BUS drivers, 2x external memories, and 1x STM32 microcontroller. Also, the MCU can power these sensors in case of power saving or latch-up events.
+* A compact design was one of our priorities during the development of this module. As a result, this module's full three-fourths are left empty and ready to **accommodate any required payload**. This current version is the payload sector represented as a universal soldering array with exposed power lines (outside the power management).
 
 <p align="center">
   <br>
