@@ -34,7 +34,7 @@ This repository contains the KiCad project and other documents created during th
 
 <p align="center">
   <br>
-  <img src=/gallery/present/header_pinout.png width=50%/>
+  <img src=/gallery/present/header_pinout.png width=60%/>
   <br><br>
   <b>Fig 3.</b> PC104 header pinout supported by this OBC module.
   <br><br>
