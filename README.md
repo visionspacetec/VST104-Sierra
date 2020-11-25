@@ -1,8 +1,59 @@
-# Under Construction
+# VST104 Board Sierra - single MCU OBC for PC104
+This repository contains the KiCad project and other documents created during the development of Board Sierra under [VST104 project](https://github.com/visionspacetec/VST104/). This PC104 CubeSats module is a single redundant onboard computer designed to fulfill most space industry requirements.
 
-AEC-Q100 level 1 : temperature <-40, +125>[°C]
+<p align="center">
+  <br>
+  <img src=/gallery/3Dexport/top.png width=49%/>
+  <img src=/gallery/3Dexport/bottom.png width=49%/>
+  <br><br>
+  <b>Fig 1.</b> Board Sierra OBC module 3D visualisation top (left) and bottom (right) side.
+  <br><br>
+</p>
 
-### References
+
+## Basic specifications
+* **`processor:`** This onboard computer is driven by state of the art, ultra-low-power **STM32L496 ARM® Cortex®-M4 core** microcontroller. This MCU is capable of running **up to 78[MHz]** in our design.
+* **`clock:`** Microcontroller is driven by two external clock sources. Low-speed **external 32.768[kHz] oscillator** (LSE) and high-speed **external 26[MHz] oscillator** (HSE). The MCU is capable of temporarily disable the HSE to achieve better power consumption.
+* **`memory:`** Two groups of triple redundant external memories are available for data storage and processing. The triple redundancy was chosen as an effective measure against single event effects. The first memory group is **256 [Mbit] Flash** wired via Quad-SPI interface and the second one is **2 [Mbit] F-RAM** using SPI.
+* **`peripherals:`** This module can communicate with other CubeSat subsystems using a wide variety of redundant protocols. The main PC104 header is capable of connecting to **2x CAN-BUS, 3x I2C, 4x UART** (with CTS and RTS), **2xSPI** (2 enables each), and **22 general purpose** A/D I/O pins. All of the listed peripherals are wired thru separated isolators controlled by the MCU. On top of that, separate traces are used for system check and maintenance signals, such as: WatchDog, KillSwitch, CPUmode, Sync, FaultCollector. The pinout of these interferences is shown in figure 3.
+* **`connectivity:`** A user can program and debug this OBC using **SWI and/or UART interface**. These interfaces are accessible on the board's edge on a separate connector with integrated electrostatic discharge protection circuitry. The SWI interface is compatible with STM ST-LINK series programmers (including SWO pin).
+
+<p align="center">
+  <br>
+  <img src=/gallery/present/modules.png width=100%/>
+  <br><br>
+  <b>Fig 2.</b> Important circuitry groups on top (left) and bottom (right) side of the module.
+  <br><br>
+</p>
+
+## Features
+* All used components are suitable for the space environment, following: mechanical failure qualifications **AEC-Q100 or AEC-Q200** and **military rated** operational temperatures (-40°C to +125°C).
+* This module requires two separate power lines of 3.3[V] and 5[V] ratings. A **robust power management** circuitry is present separately on these lines, providing various functionalities. Namely: tunable over and under-voltage protection, tunable over-current protection, amplified current monitoring output, kill switching, or simultaneous power down.
+* A group of **seven I2C temperature sensors** is spread over the entire module. These sensors are used to check the temperature of essential submodules such as: 2x power management, 2x CAN-BUS drivers, 2x external memories, and 1x STM32 microcontroller. Also, the MCU can power these sensors in case of power saving or latch-up events.
+* A compact design was one of our priorities during the development of this module. As a result, this module's full three-fourths are left empty and ready to **accommodate any required payload**. This current version is the payload sector represented as a universal soldering array with exposed power lines (outside the power management).
+
+<p align="center">
+  <br>
+  <img src=/gallery/present/header_pinout.png width=60%/>
+  <br><br>
+  <b>Fig 3.</b> PC104 header pinout supported by this OBC module.
+  <br><br>
+</p>
+
+## Debug & Program connector
+A separate 2x4 female format connector on the board's left side is used for debugging and programming.  SWI and UART5 interfaces of the boarded STM32 microprocessor are wired to this connector, as shown in figure 4. This interface is fully compatible with STM ST-Link family programmers. 
+
+<p align="center">
+  <br>
+  <img src=/documents/deb_prog_pinout.png width=50%/>
+  <br><br>
+  <b>Fig 4.</b> Pinout of the debug and program connector.
+  <br><br>
+</p>
+
+## References
+The design of this PC 104 SBC module was processed under evaluation of the following documents:
+
 [1] : [STM32L496xx datasheet](https://www.st.com/resource/en/datasheet/stm32l496ae.pdf)  
 [2] : [STM32L496xx getting started manual](https://www.st.com/resource/en/application_note/dm00125306-getting-started-with-stm32l4-series-and-stm32l4-series-hardware-development-stmicroelectronics.pdf)  
 [3] : [STM32 oscillator design guide](https://www.st.com/resource/en/application_note/cd00221665-oscillator-design-guide-for-stm8afals-stm32-mcus-and-mpus-stmicroelectronics.pdf)  
@@ -10,34 +61,3 @@ AEC-Q100 level 1 : temperature <-40, +125>[°C]
 [5] : [Common mode chokes in CAN networks](https://www.ti.com/lit/an/slla271/slla271.pdf?ts=1593763769749&ref_url=https%253A%252F%252Fwww.google.com%252F#:~:text=In%20general%2C%20common%2Dmode%20chokes,results%20in%20the%20CAN%20network.&text=Following%20the%20choke%20in%20the,is%20the%20optional%20termination%20circuit.)  
 [6] : [Isolated CAN systems with protection](https://www.ti.com/lit/an/slla419/slla419.pdf?ts=1593773861416&ref_url=https%253A%252F%252Fwww.google.com%252F#:~:text=A%20bidirectional%20TVS%20diode%20can,ratings%20up%20to%20several%20kilowatts.)
 
-### Capacitors
-| Component | Value [F] | Description | Reference | Note |
-| :-: | :-: | :-- | :-: | :-: |
-| `C1` | 100n | external decoupling capacitor for VBAT pin | [2] 2.1.6 & [2] 2.2 ||
-| `C2`, `C3`, `C4` | 100n | external decoupling capacitors for VDD pins 19, 32, 64 | [2] 2.2 ||
-| `C5`, `C6` | 10n, 1u |external decoupling capacitors for VDDA pin | [2] 2.2 ||
-| `C7` | 10u | package supply external decoupling capacitor | [2] 2.2 ||
-| `C8` | 100n | external pull-down capacitor for NRST pin | [2] 2.4.3 | not sure |
-| `C9`, `C10` | 17p | capacitors adjusting a load capacitance of `Y1` | [3] 3.3 | stray C assumed to 4[pF] |
-| `C11` | 100n | external decoupling capacitor for `Y2` | `Y2` datasheet tab. 2 | |
-| `C12`, `C13` | 100n | external decoupling capacitors for `TSn` | `TSn` datasheet 2.1 | |
-| `C14`, `C15`, `C16`, `C17` | 100n | external decoupling capacitors for `U1/2` | `U1/2` datasheet fig. 1-4 | |
-
-### Resistors
-| Component | Value [Ohm] | Description | Reference | Note |
-| :-: | :-: | :-- | :-: | :-: |
-| `R1` | 10k | external pull-down resistor for BOOT0 pin | ??? | no solid reference |
-| `R2` | 0.29M | external resistor limiting the drive level of Y1 | [3] 3.5.3 | too high value? |
-| `R3` | 450k | resistor in series with `Y1` to achieve safety factor of 7  | [3] 3.8 | not sure |
-| `R4` | 1k | `Y2` output enable resistor in series | `Y2` datasheet fig. 2 |  |
-| `R5`, `R6` | 10k | I2C pull-up resistors for temperature bus | `TSn` datasheet 2.11 | | 
-| `R7`, `R8` | 120 | CAN bus terminating resistors | `U1/2` datasheet fig. 1-4 | | 
-
-### Other Components
-| Component | Model | Description | Reference | Note |
-| :-: | :-: | :-- | :-: | :-: |
-| `FB1` |  | ferrite bead to filter a digital noise for VDDA | [2] 2.2 | value missing |
-| `Y1` | [ABS07AIG](https://www.mouser.de/datasheet/2/3/ABS07AIG-783567.pdf) | low speed external 32.768[kHz] crystal | [3] tab. 7 | |
-| `Y2` | [SiT8924](https://www.mouser.de/datasheet/2/371/SiT8924-datasheet-1839508.pdf) | high speed external 26[MHz] oscillator | [2] 4.1.2 | |
-| `TS1`, `TS2` | [MCP9804](https://www.mouser.de/datasheet/2/268/22203C-1020971.pdf) | I2C temperature sensor, ALTER not used (floating) | | |
-| `U1`, `U2` | [TCAN1051](https://www.ti.com/lit/ds/symlink/tcan1051g-q1.pdf?HQS=TI-null-null-mousermode-df-pf-null-wwe&ts=1593715043527&ref_url=https%253A%252F%252Fwww.mouser.de%252F) | fault protected CAN transceiver with CAN FD | | |
