@@ -60,4 +60,3 @@ The design of this PC 104 SBC module was processed under evaluation of the follo
 [4] : [STM32 Quad-SPI interface](https://www.st.com/resource/en/application_note/dm00227538-quadspi-interface-on-stm32-microcontrollers-and-microprocessors-stmicroelectronics.pdf)  
 [5] : [Common mode chokes in CAN networks](https://www.ti.com/lit/an/slla271/slla271.pdf?ts=1593763769749&ref_url=https%253A%252F%252Fwww.google.com%252F#:~:text=In%20general%2C%20common%2Dmode%20chokes,results%20in%20the%20CAN%20network.&text=Following%20the%20choke%20in%20the,is%20the%20optional%20termination%20circuit.)  
 [6] : [Isolated CAN systems with protection](https://www.ti.com/lit/an/slla419/slla419.pdf?ts=1593773861416&ref_url=https%253A%252F%252Fwww.google.com%252F#:~:text=A%20bidirectional%20TVS%20diode%20can,ratings%20up%20to%20several%20kilowatts.)
-
