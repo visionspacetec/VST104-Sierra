@@ -806,7 +806,7 @@ P 12900 8600
 F 0 "M4" H 13000 9050 50  0000 C CNN
 F 1 "CY15B102Q" H 13450 9050 50  0000 C CNN
 F 2 "VST104_footprints:SOIC-8_208_5.23x5.23mm" H 12900 8600 50  0001 C CNN
-F 3 "https://www.mouser.sk/datasheet/2/100/001-89166_CY15B102Q_2-Mbit_256_K_8_Serial_SPI_Auto-837782.pdf" H 12900 8600 50  0001 C CNN
+F 3 "https://www.cypress.com/file/175731/download" H 12900 8600 50  0001 C CNN
 	1    12900 8600
 	1    0    0    -1  
 $EndComp
@@ -883,7 +883,7 @@ P 12900 10600
 F 0 "M6" H 13000 11050 50  0000 C CNN
 F 1 "CY15B102Q" H 13450 11050 50  0000 C CNN
 F 2 "VST104_footprints:SOIC-8_208_5.23x5.23mm" H 12900 10600 50  0001 C CNN
-F 3 "https://www.mouser.sk/datasheet/2/100/001-89166_CY15B102Q_2-Mbit_256_K_8_Serial_SPI_Auto-837782.pdf" H 12900 10600 50  0001 C CNN
+F 3 "https://www.cypress.com/file/175731/download" H 12900 10600 50  0001 C CNN
 	1    12900 10600
 	1    0    0    -1  
 $EndComp
@@ -960,7 +960,7 @@ P 12900 9600
 F 0 "M5" H 13000 10050 50  0000 C CNN
 F 1 "CY15B102Q" H 13450 10050 50  0000 C CNN
 F 2 "VST104_footprints:SOIC-8_208_5.23x5.23mm" H 12900 9600 50  0001 C CNN
-F 3 "https://www.mouser.sk/datasheet/2/100/001-89166_CY15B102Q_2-Mbit_256_K_8_Serial_SPI_Auto-837782.pdf" H 12900 9600 50  0001 C CNN
+F 3 "https://www.cypress.com/file/175731/download" H 12900 9600 50  0001 C CNN
 	1    12900 9600
 	1    0    0    -1  
 $EndComp
@@ -2506,7 +2506,7 @@ P 19400 3150
 F 0 "LG1" H 19650 3750 50  0000 C CNN
 F 1 "74LVC1G11-Q100" H 19650 3100 50  0000 C CNN
 F 2 "VST104_footprints:SOT-363_TSSOP-6_2.0x1.25mm" H 19400 3150 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74LVC1G11_Q100.pdf" H 19400 3150 50  0001 C CNN
+F 3 "https://assets.nexperia.cn/documents/data-sheet/74LVC1G11.pdf" H 19400 3150 50  0001 C CNN
 	1    19400 3150
 	1    0    0    -1  
 $EndComp
@@ -2649,7 +2649,7 @@ P 16900 10650
 F 0 "ESD1" H 17100 11400 50  0000 C CNN
 F 1 "SP3012-06" H 17100 10600 50  0000 C CNN
 F 2 "VST104_footprints:uDFN-14_3.5x1.35mm" H 16900 10650 50  0001 C CNN
-F 3 "https://www.mouser.sk/datasheet/2/240/Littelfuse_TVS_Diode_Array_SP3012_Datasheet.pdf-268239.pdf" H 16900 10650 50  0001 C CNN
+F 3 "https://m.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sp3012_datasheet.pdf.pdf" H 16900 10650 50  0001 C CNN
 	1    16900 10650
 	1    0    0    -1  
 $EndComp
@@ -4577,7 +4577,7 @@ P 10950 2100
 F 0 "TS1" H 11350 2600 50  0000 R CNN
 F 1 "MCP9804" H 11500 2050 50  0000 R CNN
 F 2 "VST104_footprints:DFN-8_3.0x2.0mm_EP" H 10950 2100 50  0001 C CNN
-F 3 "https://www.mouser.de/datasheet/2/268/22203C-1020971.pdf" H 10950 2100 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP9804-Typical-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20002203D.pdf" H 10950 2100 50  0001 C CNN
 	1    10950 2100
 	1    0    0    -1  
 $EndComp
@@ -4588,7 +4588,7 @@ P 12950 3500
 F 0 "TS4" H 13350 4000 50  0000 R CNN
 F 1 "MCP9804" H 13500 3450 50  0000 R CNN
 F 2 "VST104_footprints:DFN-8_3.0x2.0mm_EP" H 12950 3500 50  0001 C CNN
-F 3 "https://www.mouser.de/datasheet/2/268/22203C-1020971.pdf" H 12950 3500 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP9804-Typical-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20002203D.pdf" H 12950 3500 50  0001 C CNN
 	1    12950 3500
 	1    0    0    -1  
 $EndComp
@@ -4599,7 +4599,7 @@ P 12000 2100
 F 0 "TS3" H 12400 2600 50  0000 R CNN
 F 1 "MCP9804" H 12550 2050 50  0000 R CNN
 F 2 "VST104_footprints:DFN-8_3.0x2.0mm_EP" H 12000 2100 50  0001 C CNN
-F 3 "https://www.mouser.de/datasheet/2/268/22203C-1020971.pdf" H 12000 2100 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP9804-Typical-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20002203D.pdf" H 12000 2100 50  0001 C CNN
 	1    12000 2100
 	1    0    0    -1  
 $EndComp
@@ -4610,7 +4610,7 @@ P 13000 2100
 F 0 "TS5" H 13400 2600 50  0000 R CNN
 F 1 "MCP9804" H 13550 2050 50  0000 R CNN
 F 2 "VST104_footprints:DFN-8_3.0x2.0mm_EP" H 13000 2100 50  0001 C CNN
-F 3 "https://www.mouser.de/datasheet/2/268/22203C-1020971.pdf" H 13000 2100 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP9804-Typical-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20002203D.pdf" H 13000 2100 50  0001 C CNN
 	1    13000 2100
 	1    0    0    -1  
 $EndComp
@@ -4621,7 +4621,7 @@ P 14000 2100
 F 0 "TS6" H 14400 2600 50  0000 R CNN
 F 1 "MCP9804" H 14550 2050 50  0000 R CNN
 F 2 "VST104_footprints:DFN-8_3.0x2.0mm_EP" H 14000 2100 50  0001 C CNN
-F 3 "https://www.mouser.de/datasheet/2/268/22203C-1020971.pdf" H 14000 2100 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP9804-Typical-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20002203D.pdf" H 14000 2100 50  0001 C CNN
 	1    14000 2100
 	1    0    0    -1  
 $EndComp
@@ -4632,7 +4632,7 @@ P 10950 3500
 F 0 "TS2" H 11350 4000 50  0000 R CNN
 F 1 "MCP9804" H 11500 3450 50  0000 R CNN
 F 2 "VST104_footprints:DFN-8_3.0x2.0mm_EP" H 10950 3500 50  0001 C CNN
-F 3 "https://www.mouser.de/datasheet/2/268/22203C-1020971.pdf" H 10950 3500 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP9804-Typical-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20002203D.pdf" H 10950 3500 50  0001 C CNN
 	1    10950 3500
 	1    0    0    -1  
 $EndComp
@@ -4643,7 +4643,7 @@ P 14000 3500
 F 0 "TS7" H 14400 4000 50  0000 R CNN
 F 1 "MCP9804" H 14550 3450 50  0000 R CNN
 F 2 "VST104_footprints:DFN-8_3.0x2.0mm_EP" H 14000 3500 50  0001 C CNN
-F 3 "https://www.mouser.de/datasheet/2/268/22203C-1020971.pdf" H 14000 3500 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP9804-Typical-Accuracy-Digital-Temperature-Sensor-Data-Sheet-DS20002203D.pdf" H 14000 3500 50  0001 C CNN
 	1    14000 3500
 	1    0    0    -1  
 $EndComp
