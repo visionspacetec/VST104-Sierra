@@ -16,6 +16,11 @@ _autosave-*
 *-save.kicad_pcb
 fp-info-cache
 
+# Rescue and cache files
+*-cache.lib
+*-rescue.lib
+*-rescue.dcm
+
 # Libraries hardcoded paths
 fp-lib-table
 sym-lib-table
