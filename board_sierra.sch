@@ -4046,10 +4046,10 @@ SPI1_CS1
 Text Label 10300 1300 0    50   ~ 0
 TEMP_VDD
 $Comp
-L board_sierra-rescue:TPS22965-Q1-VST104 Q1
+L VST104:TPS22965x Q1
 U 1 1 61860A10
 P 9600 1900
-F 0 "Q1" H 9850 2300 50  0000 C CNN
+F 0 "Q1" H 9850 2450 50  0000 C CNN
 F 1 "TPS22965-Q1" H 9850 1850 50  0000 C CNN
 F 2 "VST104_footprints:WSON-8_2.0x2.0mm_EPV" H 9850 2350 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/tps22965-q1.pdf?HQS=TI-null-null-mousermode-df-pf-null-wwe&ts=1594827096554&ref_url=https%253A%252F%252Fwww.mouser.sk%252F" H 9850 2350 50  0001 C CNN
