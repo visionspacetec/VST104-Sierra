@@ -1,4 +1,4 @@
-update=Ne 28. február 2021, 23:20:04
+update=Ut  9. marec 2021, 13:18:21
 version=1
 last_client=kicad
 [general]
@@ -274,7 +274,7 @@ dPairViaGap=0.25
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=/CommonData/CVUT/intership/VisionSpace/VST104-Sierra/documents/
+PlotDirectoryName=/CommonData/CVUT/bachelorThesis/figures/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew
